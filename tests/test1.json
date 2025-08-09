@@ -1,0 +1,9 @@
+[
+  {
+    "matrix_name": "FIDAP001",
+    "matrix_url": "https://math.nist.gov/MatrixMarket/data/SPARSKIT/fidap/fidap001.mtx.gz",
+    "solver": {
+      "type": "GMRES",
+      "m": 100}
+  }
+]

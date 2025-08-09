@@ -1,0 +1,9 @@
+[
+  {
+    "matrix_name": "SHERMAN3",
+    "matrix_url": "https://math.nist.gov/MatrixMarket/data/Harwell-Boeing/sherman/sherman3.mtx.gz",
+    "solver": {
+      "type": "CG"
+    }
+  }
+]
