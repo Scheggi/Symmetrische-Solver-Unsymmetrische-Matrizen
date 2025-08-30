@@ -14,5 +14,37 @@
     "cpu_user_time_s": 2.48,
     "cpu_system_time_s": 0.04,
     "max_ram_kb": 66288
+  },
+  {
+    "solver_result": [
+      {
+        "solver_name": "Conjugate Gradient",
+        "matrix_name": "BCSPWR10",
+        "matrix_size": 5300,
+        "time_ms": 43451,
+        "iters": "N/A",
+        "final_rel_res": 9.136360897674784e-7
+      }
+    ],
+    "config_file": "./tests/sym-small4.json",
+    "cpu_user_time_s": 1678.63,
+    "cpu_system_time_s": 151.14,
+    "max_ram_kb": 705840
+  },
+  {
+    "solver_result": [
+      {
+        "solver_name": "Conjugate Gradient NE",
+        "matrix_name": "BCSPWR10",
+        "matrix_size": 5300,
+        "time_ms": 114465,
+        "iters": "N/A",
+        "final_rel_res": 5.939027580912723e-8
+      }
+    ],
+    "config_file": "./tests/sym-small4.json",
+    "cpu_user_time_s": 795.84,
+    "cpu_system_time_s": 1.57,
+    "max_ram_kb": 531756
   }
 ]

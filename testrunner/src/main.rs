@@ -21,7 +21,7 @@ struct SolverResult {
 }
 
 /// A combined result including resource usage from the `time` command.
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize)]
 struct EnrichedResult {
     solver_result: Vec<SolverResult>,
     config_file: String,
@@ -73,7 +73,28 @@ fn parse_time_output(stderr: &str) -> Result<(f64, f64, u64)> {
 
 fn main() -> Result<()> {
     let cli = Cli::parse();
-    let mut enriched_results: Vec<EnrichedResult> = Vec::new();
+    let output_filename = "final_benchmark_summary.json";
+
+    let mut enriched_results: Vec<EnrichedResult> = if PathBuf::from(output_filename).exists() {
+        println!("Found existing summary file '{}'. New results will be appended.", output_filename);
+        let existing_content = fs::read_to_string(output_filename)
+            .context(format!("Failed to read existing summary file '{}'", output_filename))?;
+
+        // If the file exists but is empty, start fresh. Otherwise, parse it.
+        if existing_content.trim().is_empty() {
+            Vec::new()
+        } else {
+            serde_json::from_str(&existing_content).with_context(|| {
+                format!(
+                    "Failed to parse existing JSON from '{}'. Check for malformed content.",
+                    output_filename
+                )
+            })?
+        }
+    } else {
+        // If the file doesn't exist, start with an empty vector.
+        Vec::new()
+    };
 
     // Find all .json files in the specified directory
     let config_files = WalkDir::new(&cli.config_dir)
@@ -133,7 +154,6 @@ fn main() -> Result<()> {
 
     // Save the final, combined results to a file
     let final_report = serde_json::to_string_pretty(&enriched_results)?;
-    let output_filename = "final_benchmark_summary.json";
     fs::write(output_filename, final_report)?;
 
     println!("\n✅ All benchmarks finished. Combined report saved to '{}'", output_filename);
