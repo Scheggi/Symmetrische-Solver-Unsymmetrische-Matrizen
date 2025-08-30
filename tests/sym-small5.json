@@ -1,0 +1,10 @@
+[
+  {
+    "matrix_name": "BCSSTK08",
+    "matrix_url": "https://math.nist.gov/pub/MatrixMarket2/Harwell-Boeing/bcsstruc1/bcsstk08.mtx.gz",
+    "solver": {
+      "type": "CG",
+      "m": 1000,
+      "tol": 1e-8}
+  }
+]
