@@ -8,6 +8,7 @@ use serde::Deserialize;
 pub(crate) enum SolverConfig {
     LU,
     CG,
+    CGNE,
     GMRES { m: usize},
     BiCGSTAB { tol: f64 },
 }

@@ -18,7 +18,7 @@ use config::{SolverConfig, TestRun};
 use io::load_matrix_from_path;
 use reporting::{print_summary, BenchmarkResult};
 use crate::errors::AppError;
-use crate::solvers::{bicgstab, conjugate_gradient, gmres, solve_lu};
+use crate::solvers::{bicgstab, conjugate_gradient,conjugate_gradient_normal_euqitation ,gmres, solve_lu};
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -100,6 +100,14 @@ fn main() -> Result<(), Box<dyn Error>> {
                 let duration = start.elapsed();
                 let res = (&b - &a.dot(&x)).norm_l2() / norm_b;
                 all_results.push(BenchmarkResult { solver_name: "Conjugate Gradient".to_string(), matrix_name: run.matrix_name.clone(), matrix_size: n, time_ms: duration.as_millis(), iters: "N/A".to_string(), final_rel_res: res });
+            }
+            SolverConfig::CGNE => {
+                tracing::info!("   Running Conjugate Gradient Normal Equitation on {}...", run.matrix_name);
+                let start = Instant::now();
+                let x = conjugate_gradient_normal_euqitation(&a, &b, &x0, 2*n);
+                let duration = start.elapsed();
+                let res = (&b - &a.dot(&x)).norm_l2() / norm_b;
+                all_results.push(BenchmarkResult { solver_name: "Conjugate Gradient NE".to_string(), matrix_name: run.matrix_name.clone(), matrix_size: n, time_ms: duration.as_millis(), iters: "N/A".to_string(), final_rel_res: res });
             }
             SolverConfig::GMRES { m} => {
                 tracing::info!("   Running GMRES(m={}) on {}...", m, run.matrix_name);
