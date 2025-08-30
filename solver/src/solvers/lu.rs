@@ -1,6 +1,5 @@
 use ndarray::{s, Array1, Array2};
 
-
 /// Decomposes a square matrix A into lower (L) and upper (U) triangular matrices.
 ///
 /// This function implements the Doolittle algorithm for LU factorization, where L
