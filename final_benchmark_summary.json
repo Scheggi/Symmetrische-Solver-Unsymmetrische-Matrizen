@@ -1,0 +1,18 @@
+[
+  {
+    "solver_result": [
+      {
+        "solver_name": "Conjugate Gradient",
+        "matrix_name": "BCSSTK08",
+        "matrix_size": 1074,
+        "time_ms": 310,
+        "iters": "N/A",
+        "final_rel_res": 5.96779796415891e-7
+      }
+    ],
+    "config_file": "./tests/sym-small5.json",
+    "cpu_user_time_s": 2.48,
+    "cpu_system_time_s": 0.04,
+    "max_ram_kb": 66288
+  }
+]

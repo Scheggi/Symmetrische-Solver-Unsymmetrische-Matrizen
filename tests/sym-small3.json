@@ -1,0 +1,10 @@
+[
+  {
+    "matrix_name": "BCSPWR07",
+    "matrix_url": "https://math.nist.gov/pub/MatrixMarket2/Harwell-Boeing/bcspwr/bcspwr07.mtx.gz",
+    "solver": {
+      "type": "CG",
+      "m": 1000,
+      "tol": 1e-8}
+  }
+]

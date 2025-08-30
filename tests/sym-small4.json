@@ -1,0 +1,10 @@
+[
+  {
+    "matrix_name": "BCSPWR10",
+    "matrix_url": "https://math.nist.gov/pub/MatrixMarket2/Harwell-Boeing/bcspwr/bcspwr10.mtx.gz",
+    "solver": {
+      "type": "BiCGSTAB",
+      "m": 1000,
+      "tol": 1e-8}
+  }
+]
