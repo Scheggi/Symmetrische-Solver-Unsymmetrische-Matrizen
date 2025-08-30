@@ -1,0 +1,10 @@
+[
+  {
+    "matrix_name": "BCSSTK14",
+    "matrix_url": "https://math.nist.gov/pub/MatrixMarket2/Harwell-Boeing/bcsstruc2/bcsstk14.mtx.gz",
+    "solver": {
+      "type": "BIGCSTAB",
+      "m": 1000,
+      "tol": 1e-8}
+  }
+]
