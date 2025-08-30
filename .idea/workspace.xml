@@ -14,8 +14,13 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c729619-751c-44e9-b23c-8f8ab9b1ffda" name="Changes" comment="implement solver">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="3c729619-751c-44e9-b23c-8f8ab9b1ffda" name="Changes" comment="modify gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/src/config.rs" beforeDir="false" afterPath="$PROJECT_DIR$/solver/src/config.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/solver/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/src/solvers/lu.rs" beforeDir="false" afterPath="$PROJECT_DIR$/solver/src/solvers/lu.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solver/src/solvers/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/solver/src/solvers/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sym-small4.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sym-small4.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,31 +66,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cargo.Run.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/toni/RustroverProjects/Symmetrische-Solver-Unsymmetrische-Matrizen",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cargo.Run.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/cg-ne&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/toni/RustroverProjects/Symmetrische-Solver-Unsymmetrische-Matrizen&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="buildProfileId" value="dev" />
@@ -116,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755516640377</updated>
-      <workItem from="1755516641585" duration="22788000" />
+      <workItem from="1755516641585" duration="24871000" />
     </task>
     <task id="LOCAL-00001" summary="implement solver">
       <option name="closed" value="true" />
@@ -126,7 +131,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756548771980</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modify gitignore">
+      <option name="closed" value="true" />
+      <created>1756548960281</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756548960281</updated>
+    </task>
+    <task id="LOCAL-00003" summary="modify gitignore">
+      <option name="closed" value="true" />
+      <created>1756549150146</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756549150146</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +155,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implement solver" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement solver" />
+    <MESSAGE value="modify gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify gitignore" />
   </component>
 </project>
